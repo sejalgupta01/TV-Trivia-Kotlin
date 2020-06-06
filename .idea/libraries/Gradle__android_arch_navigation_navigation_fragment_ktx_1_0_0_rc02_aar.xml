@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: android.arch.navigation:navigation-fragment-ktx:1.0.0-rc02@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-ktx-1.0.0-rc02.aar/e77e39014c24b8456e57816312c66636/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-ktx-1.0.0-rc02.aar/e77e39014c24b8456e57816312c66636/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.navigation/navigation-fragment-ktx/1.0.0-rc02/f1f9c95dbec6af1064f09f8e8627a48abc9b3c3e/navigation-fragment-ktx-1.0.0-rc02-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

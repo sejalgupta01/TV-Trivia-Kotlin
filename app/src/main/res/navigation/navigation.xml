@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.android.tv_trivia.TitleFragment"
+        android:label="@string/tv_trivia"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_showsFragment"
+            app:destination="@id/showsFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showsFragment"
+        android:name="com.example.android.tv_trivia.ShowsFragment"
+        android:label="@string/choose_show"
+        tools:layout="@layout/fragment_shows">
+        <action
+            android:id="@+id/action_showsFragment_to_moneyFragment"
+            app:destination="@id/moneyFragment" />
+        <action
+            android:id="@+id/action_showsFragment_to_brooklynFragment"
+            app:destination="@id/brooklynFragment" />
+        <action
+            android:id="@+id/action_showsFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_showsFragment_to_sherlockFragment"
+            app:destination="@id/sherlockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moneyFragment"
+        android:name="com.example.android.tv_trivia.MoneyFragment"
+        android:label="@string/money_heist"
+        tools:layout="@layout/fragment_money">
+        <action
+            android:id="@+id/action_moneyFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/moneyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_moneyFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/moneyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/brooklynFragment"
+        android:name="com.example.android.tv_trivia.BrooklynFragment"
+        android:label="@string/brooklyn_99"
+        tools:layout="@layout/fragment_brooklyn">
+        <action
+            android:id="@+id/action_brooklynFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/friendsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_brooklynFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/brooklynFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.android.tv_trivia.FriendsFragment"
+        android:label="@string/friends"
+        tools:layout="@layout/fragment_friends">
+        <action
+            android:id="@+id/action_friendsFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/friendsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_friendsFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/friendsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sherlockFragment"
+        android:name="com.example.android.tv_trivia.SherlockFragment"
+        android:label="@string/sherlock"
+        tools:layout="@layout/fragment_sherlock">
+        <action
+            android:id="@+id/action_sherlockFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/sherlockFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_sherlockFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/sherlockFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.android.tv_trivia.GameOverFragment"
+        android:label="@string/game_over"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_showsFragment"
+            app:destination="@id/showsFragment"
+            app:popUpTo="@id/showsFragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.example.android.tv_trivia.GameWonFragment"
+        android:label="@string/congratulations"
+        tools:layout="@layout/fragment_game_won">
+        <action
+            android:id="@+id/action_gameWonFragment_to_showsFragment"
+            app:destination="@id/showsFragment"
+            app:popUpTo="@id/showsFragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.tv_trivia.AboutFragment"
+        android:label="@string/title_about_trivia"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.android.tv_trivia.RulesFragment"
+        android:label="@string/title_trivia_rules"
+        tools:layout="@layout/fragment_rules" />
+
+</navigation>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.tv_trivia.ShowsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/select_show_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/asap_medium"
+                android:text="@string/select_show_text"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/moneyHeist"
+                style="@style/whiteBox"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/select_money_heist"
+                app:layout_constraintEnd_toStartOf="@+id/brooklyn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/select_show_text"
+                app:layout_constraintTop_toBottomOf="@+id/select_show_text" />
+
+            <TextView
+                android:id="@+id/moneyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Money Heist"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/brooklynText"
+                app:layout_constraintEnd_toEndOf="@+id/moneyHeist"
+                app:layout_constraintStart_toStartOf="@+id/moneyHeist" />
+
+            <TextView
+                android:id="@+id/brooklyn"
+                style="@style/whiteBox"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/select_brooklyn"
+                app:layout_constraintEnd_toEndOf="@+id/select_show_text"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/moneyHeist"
+                app:layout_constraintTop_toBottomOf="@+id/select_show_text" />
+
+            <TextView
+                android:id="@+id/brooklynText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Brooklyn 99"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/brooklyn"
+                app:layout_constraintStart_toStartOf="@+id/brooklyn"
+                app:layout_constraintTop_toBottomOf="@+id/brooklyn"
+                app:layout_constraintBottom_toTopOf="@+id/sherlock" />
+
+            <TextView
+                android:id="@+id/friends"
+                style="@style/whiteBox"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/friends"
+                app:layout_constraintEnd_toStartOf="@+id/sherlock"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/select_show_text"
+                app:layout_constraintTop_toBottomOf="@+id/moneyText" />
+
+            <TextView
+                android:id="@+id/friendsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="F.R.I.E.N.D.S"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/friends"
+                app:layout_constraintStart_toStartOf="@+id/friends"
+                app:layout_constraintTop_toBottomOf="@+id/friends" />
+
+            <TextView
+                android:id="@+id/sherlock"
+                style="@style/whiteBox"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/sherlock"
+                app:layout_constraintEnd_toEndOf="@+id/select_show_text"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/friends"
+                app:layout_constraintTop_toBottomOf="@+id/brooklynText" />
+
+            <TextView
+                android:id="@+id/sherlockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Sherlock"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/sherlock"
+                app:layout_constraintStart_toStartOf="@+id/sherlock"
+                app:layout_constraintTop_toBottomOf="@+id/sherlock" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
